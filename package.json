@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build:client": "cd self-introduction && npm run build",
+    "postbuild:client": "mkdir -p self-introduction-station02/client-build/self-introduction && cp -r self-introduction/dist/* self-introduction-station02/client-build/self-introduction/",
+    "build:server": "cd self-introduction-station02 && npm run build",
+    "build": "npm run build:client && npm run postbuild:client && npm run build:server",
+    "dev": "cd self-introduction-station02 && npm run dev"
+  }
+}
